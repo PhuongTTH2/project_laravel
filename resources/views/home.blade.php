@@ -6,7 +6,9 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">{{ __('Dashboard') }}</div>
-
+                <a href="/crud">Crud</a>   </br> 
+                <a href="/product">fptshop</a>    </br> 
+                <a href="/chatapp">chatapp</a>    
                 <div class="card-body">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">

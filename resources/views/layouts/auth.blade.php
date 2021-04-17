@@ -17,17 +17,25 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/static/css/AdminLTE.css">
 	<link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/css/style.css">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
 </head>
 
 <body class="hold-transition login-page">
     @yield('content')
+    @yield('content2')
     <!-- jQuery 3 -->
     <script src="/static/components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->
     <script src="/static/components/bootstrap/dist/js/bootstrap.min.js"></script>
-    
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
+    <!-- <script src="{{ asset('static/js/todo.js') }}" defer></script> -->
+    <!-- <script src="/js/users.js"></script> -->
     @yield('script')
 </body>
 

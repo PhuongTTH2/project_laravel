@@ -18,6 +18,8 @@
 				<div class="users-list" id="users-list">
 
 				</div>
+                <div class = "check-empty hide"> No users are available to chat</div>
+                @include('chatapp.chat-box')
 			</div>
 		</section>
 	</div>

@@ -163,3 +163,19 @@ CREATE TABLE `products` (
 ALTER TABLE  `users`
 ADD `fname` varchar(255) NOT NULL,
 ADD `lname` varchar(255) NOT NULL;
+
+CREATE TABLE `chat_apps` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `incoming_msg_id` int(255) NOT NULL,
+  `from_user` int(255) NOT NULL,
+  `to_user` int(255) NOT NULL,
+  `outgoing_msg_id` int(255) NOT NULL,
+  `msg` varchar(1000) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+   PRIMARY KEY (`id`),
+   KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+ALTER TABLE `chat_apps`
+  ADD PRIMARY KEY (`id`);

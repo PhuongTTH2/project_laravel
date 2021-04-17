@@ -1,12 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 use App\Models\ChatApp;
 use App\Models\User;
-use Illuminate\Http\Request;
 use Response;
-
+use DB;
+use Session;
 class ChatAppController extends Controller
 {
     /**
@@ -21,7 +23,9 @@ class ChatAppController extends Controller
     {
         $this->middleware('auth');
         $this->model = new User();
+        $id = Auth::id();
         $this->data['chatUrl'] = url('/') . $this->chatUrl;
+
     }
 
     public function index()
@@ -101,4 +105,64 @@ class ChatAppController extends Controller
     {
         //
     }
+
+    public function chatBox(Request $request)
+    {
+        $id = $request['id'];
+        $todo = User::find($id);
+       return $todo ;
+    }
+
+    function addMessages(Request $request){
+        $id = Auth::user()->id;
+
+        $request = $request->validate([
+            'id' => 'required|max:255',
+            'msg' => 'required'
+        ]);
+        $id_chat = $request['id'];
+        $messages = $request['msg'];
+
+        $chat = new ChatApp;
+        $chat->from_user = $id_chat;
+        $chat->to_user = $id;
+        $chat->outgoing_msg_id = 99;
+        $chat->incoming_msg_id = 99;
+        $chat->msg = $messages;
+        $chat->created_at = time();
+        $chat->updated_at = time();
+        $chat->save();
+//        DB::beginTransaction();
+//        try {
+//            $chat->save();
+//            DB::commit();
+//        } catch (Exception $e) {
+//            DB::rollBack();
+//            // throw $e;
+//            // return Response::json([
+//            //     'status' => 'error',
+//            //     'message'=> 'error message'
+//            //   ]);
+//        }
+
+        return $messages;
+    }
+    public function getLoadLatestMessages(Request $request)
+    {
+        if(!$request->user_id) {
+            return;
+        }
+        $messages = ChatApp::where(function($query) use ($request) {
+            $query->where('from_user', Auth::user()->id)->where('to_user', $request->user_id);
+        })->orWhere(function ($query) use ($request) {
+            $query->where('from_user', $request->user_id)->where('to_user', Auth::user()->id);
+        })->orderBy('created_at', 'ASC')->limit(10)->get();
+        $return = [];
+        foreach ($messages as $message) {
+            $return[] = view('message-line')->with('message', $message)->render();
+        }
+        return response()->json(['state' => 1, 'messages' => $return]);
+    }
+
+
 }
