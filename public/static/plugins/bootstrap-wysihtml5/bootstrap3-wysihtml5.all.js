@@ -403,11 +403,11 @@ var wysihtml5 = {
         fail: function(reason) {
             this.initialized = true;
             this.supported = false;
-            throw new Error("Module '" + this.name + "' failed to load: " + reason);
+            throw new Error("Modules '" + this.name + "' failed to load: " + reason);
         },
 
         warn: function(msg) {
-            api.warn("Module " + this.name + ": " + msg);
+            api.warn("Modules " + this.name + ": " + msg);
         },
 
         deprecationNotice: function(deprecated, replacement) {
@@ -428,7 +428,7 @@ var wysihtml5 = {
                     initFunc(api, module);
                     module.supported = true;
                 } catch (ex) {
-                    var errorMessage = "Module '" + name + "' failed to load: " + getErrorDesc(ex);
+                    var errorMessage = "Modules '" + name + "' failed to load: " + getErrorDesc(ex);
                     consoleLog(errorMessage);
                 }
             }

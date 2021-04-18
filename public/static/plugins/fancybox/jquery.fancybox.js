@@ -220,7 +220,7 @@
         trapFocus : true,
 
 
-        // Module specific options
+        // Modules specific options
         // =======================
 
         fullScreen : {

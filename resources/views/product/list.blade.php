@@ -2,6 +2,7 @@
 @section('content')
 
 <div class="container">
+    - Menu
 	- get thong tin từ category
 	- đăng ký thông tin
     - user 2 xác nhận
@@ -14,6 +15,7 @@
         Danh sách sản phẩm
     </h1>
 </section>
+
 <section class="content">
 	<div class="box box-primary">
         <div class="box-header"> 
@@ -22,11 +24,11 @@
                         <i class="fa fa-plus"></i> Thêm mới
                  </a>
             </div>
+            <div>Chon time va Loai san pham</div>
         </div>
 
          <div class="box-body">
          </div>
-
         <div class="box-body table-responsive-custom">
             <table id="table">
                 <tr>

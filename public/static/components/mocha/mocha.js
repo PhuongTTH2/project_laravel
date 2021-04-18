@@ -417,7 +417,7 @@ if (typeof module !== 'undefined') {
 require.register("browser/events.js", function(module, exports, require){
 
 /**
- * Module exports.
+ * Modules exports.
  */
 
 exports.EventEmitter = EventEmitter;
@@ -825,7 +825,7 @@ Context.prototype.inspect = function(){
 require.register("hook.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Runnable = require('./runnable');
@@ -882,7 +882,7 @@ Hook.prototype.error = function(err){
 require.register("interfaces/bdd.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Suite = require('../suite')
@@ -1023,7 +1023,7 @@ module.exports = function(suite){
 require.register("interfaces/exports.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Suite = require('../suite')
@@ -1096,7 +1096,7 @@ exports.exports = require('./exports');
 require.register("interfaces/qunit.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Suite = require('../suite')
@@ -1222,7 +1222,7 @@ module.exports = function(suite){
 require.register("interfaces/tdd.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Suite = require('../suite')
@@ -1369,7 +1369,7 @@ require.register("mocha.js", function(module, exports, require){
  */
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var path = require('browser/path')
@@ -1850,7 +1850,7 @@ function plural(ms, n, name) {
 require.register("reporters/base.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var tty = require('browser/tty')
@@ -2361,7 +2361,7 @@ function sameType(a, b) {
 require.register("reporters/doc.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -2421,7 +2421,7 @@ function Doc(runner) {
 require.register("reporters/dot.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -2490,7 +2490,7 @@ Dot.prototype.constructor = Dot;
 require.register("reporters/html-cov.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var JSONCov = require('./json-cov')
@@ -2544,7 +2544,7 @@ function coverageClass(n) {
 require.register("reporters/html.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -2844,7 +2844,7 @@ exports.JSONStream = require('./json-stream');
 require.register("reporters/json-cov.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base');
@@ -3001,7 +3001,7 @@ function clean(test) {
 require.register("reporters/json-stream.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3065,7 +3065,7 @@ function clean(test) {
 require.register("reporters/json.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3138,7 +3138,7 @@ function clean(test) {
 require.register("reporters/landing.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3242,7 +3242,7 @@ Landing.prototype.constructor = Landing;
 require.register("reporters/list.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3313,7 +3313,7 @@ List.prototype.constructor = List;
 
 require.register("reporters/markdown.js", function(module, exports, require){
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3408,7 +3408,7 @@ function Markdown(runner) {
 require.register("reporters/min.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base');
@@ -3453,7 +3453,7 @@ Min.prototype.constructor = Min;
 
 require.register("reporters/nyan.js", function(module, exports, require){
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3722,7 +3722,7 @@ NyanCat.prototype.constructor = NyanCat;
 require.register("reporters/progress.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3816,7 +3816,7 @@ Progress.prototype.constructor = Progress;
 require.register("reporters/spec.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3907,7 +3907,7 @@ Spec.prototype.constructor = Spec;
 require.register("reporters/tap.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -3984,7 +3984,7 @@ function title(test) {
 require.register("reporters/xunit.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Base = require('./base')
@@ -4111,7 +4111,7 @@ function cdata(str) {
 require.register("runnable.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var EventEmitter = require('browser/events').EventEmitter
@@ -4345,7 +4345,7 @@ Runnable.prototype.run = function(fn){
 
 require.register("runner.js", function(module, exports, require){
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var EventEmitter = require('browser/events').EventEmitter
@@ -5015,7 +5015,7 @@ function filterLeaks(ok, globals) {
 require.register("suite.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var EventEmitter = require('browser/events').EventEmitter
@@ -5319,7 +5319,7 @@ Suite.prototype.eachTest = function(fn){
 require.register("test.js", function(module, exports, require){
 
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var Runnable = require('./runnable');
@@ -5358,7 +5358,7 @@ Test.prototype.constructor = Test;
 
 require.register("utils.js", function(module, exports, require){
 /**
- * Module dependencies.
+ * Modules dependencies.
  */
 
 var fs = require('browser/fs')

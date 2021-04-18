@@ -25,8 +25,14 @@
 </head>
 
 <body class="hold-transition login-page">
-    @yield('content')
-    @yield('content2')
+  {{--<div class="container">--}}
+      <div class="col-sm-1 col-md-1 col-lg-1">
+          @include('element.menu')
+      </div>
+      <div class="col-sm-9 col-md-9 col-lg-9">
+          @yield('content')
+      </div>
+  {{--</div>--}}
     <!-- jQuery 3 -->
     <script src="/static/components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap 3.3.7 -->

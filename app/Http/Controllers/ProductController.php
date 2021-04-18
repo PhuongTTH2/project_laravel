@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Product;
 
+use App\Repositories\ProductRepository;
+
 class ProductController extends Controller
 {
     /**
@@ -19,11 +21,11 @@ class ProductController extends Controller
     protected $listUrl = '/product/list';
     protected $viewUrl = '/product/view';
     protected $deleteUrl = '/product/delete';
-
-    public function __construct()
+    protected $producttRepository;
+    public function __construct(ProductRepository $producttRepository)
     {
         $this->middleware('auth');
-
+        $this->producttRepository = $producttRepository;
         $this->data['addUrl'] = url('/') . $this->addUrl;
         $this->data['listUrl'] = url('/') . $this->listUrl;
         $this->data['editUrl'] = url('/') . $this->editUrl;
@@ -33,7 +35,8 @@ class ProductController extends Controller
 
     public function index()
     {
-        $this->data['product'] = Product::all();
+//        $this->data['product'] = Product::all();
+        $this->data['product'] =  $this->producttRepository->all();
         return view('product.list', $this->data);
     }
 

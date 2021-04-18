@@ -2691,7 +2691,7 @@ function toolbarModuleFilterHtml() {
 		return false;
 	}
 
-	moduleFilterHtml += "<label for='qunit-modulefilter'>Module: </label>" +
+	moduleFilterHtml += "<label for='qunit-modulefilter'>Modules: </label>" +
 		"<select id='qunit-modulefilter' name='modulefilter'><option value='' " +
 		( QUnit.urlParams.module === undefined ? "selected='selected'" : "" ) +
 		">< All Modules ></option>";
