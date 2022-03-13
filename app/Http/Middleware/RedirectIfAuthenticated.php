@@ -6,7 +6,7 @@ use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Arr;
 class RedirectIfAuthenticated
 {
     /**
@@ -19,14 +19,19 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, ...$guards)
     {
-        $guards = empty($guards) ? [null] : $guards;
-
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
-            }
+         $guard =  Arr::get($guards, 0);
+        switch ($guard) {
+            case 'admin' :
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('administrators.index');
+                }
+                break;
+            default:
+                if (Auth::guard($guard)->check()) {
+                    return redirect()->route('home');
+                }
+                break;
         }
-
         return $next($request);
     }
 }

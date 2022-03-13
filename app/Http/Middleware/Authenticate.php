@@ -12,10 +12,17 @@ class Authenticate extends Middleware
      * @param  \Illuminate\Http\Request  $request
      * @return string|null
      */
+
+     public function handle($request, \Closure $next, ...$guards) {
+        \Log::channel('test_debug')->debug("Authenticate: " . "function handle");
+        $this->authenticate($request, $guards);
+        return $next($request);
+    }
+
     protected function redirectTo($request)
     {
-        if (! $request->expectsJson()) {
-            return route('login');
-        }
+        // if (! $request->expectsJson()) {
+        //     return route('login');
+        // }
     }
 }

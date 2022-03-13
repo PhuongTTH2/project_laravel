@@ -17,6 +17,7 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="/static/css/AdminLTE.css">
 	<link rel="stylesheet" href="/static/css/custom.css">
+    <link rel="stylesheet" href="/static/css/admin/common.css">
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>

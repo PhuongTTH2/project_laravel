@@ -7,7 +7,7 @@
 <div class="login-box">
     
     <div class="login-logo">
-        <a href="javascript:;"><b>Backend</b> FOXPAY</a>
+        <a href="javascript:;"><b>Backend</b></a>
     </div>
 
     <div class="login-box-body">
