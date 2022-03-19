@@ -1,0 +1,233 @@
+.login_page{
+	background: #d2d6de;
+}
+#contents > .container{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #red;
+}
+
+.login_box{
+	width: 400px;
+	padding: 20px;
+	margin: 0 auto;
+	background-color: #fff;
+	text-align: left;
+	margin-top: 20px;
+
+}
+.login_box label,
+.login_box .login_input{
+	display: block;
+}
+.login_box label{
+	padding-left: 10px;
+}
+.login_box .login_input{
+	/*margin: 0 auto;*/
+	border: solid 1px #2483c5;
+	border-radius: 14px;
+	padding: 4px 0 4px 15px;
+	font-weight: normal !important;
+}
+/*input:hover{
+	background-color: #54c4d8 !important;
+	border-color: #54c4d8 !important;
+}*/
+.btn_M{
+	margin-top: 10px;
+	display: block;
+	background-color: #2483c5 !important;
+	color: #fff !important;
+	border: solid 1px #404040;
+	height: 30px;
+	width: 90px;
+	border-radius: 14px;
+	text-align: center;
+	cursor: pointer;
+}
+.btn_M:hover {
+	background-color: #54c4d8 !important;
+	border-color: #54c4d8 !important;
+}
+.btn_S{
+	display: flex;
+	background-color: #fff ;
+    color: #7f7f7f;
+	justify-content: center;
+	height: auto;
+	width: 50px;
+	border-radius: 14px	;
+	border: solid 1px #7f7f7f;
+	cursor: pointer;
+}
+.btn_S:hover{
+	background-color: #54c4d8 !important;
+	border-color: #54c4d8 !important;
+}
+/*
+ header
+ */
+
+header, footer {
+	background-color: #404040;
+	height: 50px;
+	width: 100%;
+	color: #fff;
+	padding: 0 60px;
+
+}
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 100;
+}
+header > div{
+	margin-top: 10;
+}
+header > div > a{
+	font-size: 18px !important;
+	margin: 0;
+	color: #fff !important;
+	position: absolute !important;
+	display: block;
+	font-weight: bold;
+}
+header a span {
+    font-size: 12px;
+    vertical-align: middle;
+}
+header #logout{
+	right: 25px;
+}
+/*
+ sidemenu
+ */
+nav {
+	background-color: #7f7f7f;
+	color: #fff;
+	z-index: 99;
+	min-width: 60px;
+	position: fixed;
+	height: 100%;
+}
+nav > ul {
+	list-style-type: none;
+}
+nav > ul.sidemenu > li {
+	padding: 0px 0 0 ;
+	text-align: center;
+	position: relative;
+	white-space: nowrap;
+}
+ul.sidemenu > li.active{
+	width: 100%;
+}
+ul.sidemenu a {
+	font-size: 13px;
+	color: #fff;
+	width: 100%;
+	display: block;
+	text-align: left;
+	padding-top: 8px;
+    text-decoration: none;
+}
+
+ul.sidemenu li > a:hover{
+  background-color: #555;
+  color: white;
+}
+
+
+/*
+ content
+ */
+.container.admin{
+	max-width: 300px;
+	overflow: hidden;
+}
+#contents > div.admin {
+	padding-left: 120px !important;
+
+}
+
+/*
+contents_title
+*/
+#contents .container .contents_title {
+    padding: 60px 0 0 120px;
+    width: calc(100% - 0px);
+    position: fixed;
+    background-color: #f5f5f5;
+    z-index: 2;
+    transition: all 500ms 0s ease-in-out;
+}
+.cart_table_container > form > ul {
+    display: inline-flex;
+    position: absolute;
+    right: 0;
+}
+
+/*
+	form list
+*/
+.cart_table_container{
+	display: inline-flex;
+	position: absolute;
+}
+.cart_table_container div.table_box{
+	margin-top: 20px;
+	background-color: #fff;
+	max-height: 550px;
+	overflow-x:  hidden;
+	overflow-y:  auto;
+}
+
+.cart_table_container thead th{
+	text-align: center;
+	min-width: 200px !important;
+	height: 40px;
+	vertical-align: middle;
+}
+
+.cart_table_container table td{
+	text-align: center;
+	min-width: 200px !important;
+	height: 50px;
+}
+/*
+ tao
+*/
+
+.add_new_admin,
+.edit_new_admin{
+	/*margin-top: 20px;*/
+	/*table-layout: fixed;*/
+}
+.add_new_admin tbody tr ,
+.edit_new_admin tbody tr{
+		position: relative;
+	/*margin-top: 200px;*/
+}
+.add_new_admin tbody td ,
+.edit_new_admin tbody td{
+	padding: 8px;
+	max-width: 250px !important;
+}
+.add_new_admin  td input ,
+.edit_new_admin td input {
+	border: solid 1px #2483c5;
+}
+.add_new_admin > tbody > tr > td.must::after ,
+.edit_new_admin > tbody > tr > td.must::after {
+	top: 15px;
+	left: 0px;
+	background-color: #e04343;
+	color: #fff;
+	font-size: 12px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
